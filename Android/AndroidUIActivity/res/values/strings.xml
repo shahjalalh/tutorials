@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GK Test</string>
+    <string name="app_heading">General Knowledge Test</string>
+    <string name="app_intro">This is an example app, which test your general knowledge. General knowledge has been defined in differential psychology as "culturally valued knowledge communicated by a range of non-specialist media" and encompassing a wide subject range.</string>
+	<string name="starttest_btn">Start Test</string>
+	<string name="score_txt">Your Score: </string>
+	
+	<string name="que1">1. Longest natural sandy sea beach?</string>
+	<string name="que1_ans1">Cox\'s_Bazar, Bangladesh</string>
+	<string name="que1_ans2">Marina Beach, India</string>
+	
+	<string name="que2">2. Largest mangrove forest?</string>
+	<string name="que2_ans1">Palawan, Philippines</string>
+	<string name="que2_ans2">The Sundarbans, Bangladesh</string>
+	
+	<string name="que3">3. The largest structures volcano?</string>
+	<string name="que3_ans1">Koryaksky volcano, Russia</string>
+	<string name="que3_ans2">Mud volcanoes, Azerbaijan</string>
+	
+	<string name="submit_btn">Submit</string>
+</resources>
