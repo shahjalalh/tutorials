@@ -1,0 +1,137 @@
+@setZero: 0;
+@blockDisplay: block;
+
+@colorWhite: #FFFFFF;
+@colorBlack: #000000;
+@colorGray: #AAAAAA;
+@colorHover: #C5E105;
+@colorLightGray: #BBBBBB;
+
+@autoAlign: auto;
+@noDecoration: none;
+@setFont: arial, sans-serif;
+@normalFontStyle: normal;
+
+html {
+  height: 100%;
+}
+
+* { 
+  margin: @setZero;
+  padding: @setZero;
+}
+
+footer, header, nav {
+  display: @blockDisplay;
+}
+
+body { 
+  font: @normalFontStyle .80em @setFont;
+  background: @colorBlack;
+  color: @colorLightGray;
+}
+
+p { 
+  padding: @setZero @setZero 25px @setZero;
+  line-height: 1.7em;}
+
+img { 
+  border: @setZero;
+}
+
+h1{
+  font: @normalFontStyle 200% @setFont;
+  margin: @setZero @setZero 15px @setZero;
+  padding: @setZero @setZero 5px @setZero;
+}
+
+a{
+  outline: @noDecoration;
+  text-decoration: @noDecoration;
+  color: @colorHover;
+
+  &:hover {
+    color: @colorHover;
+  }
+}
+
+#main, #header, #logo, #site_content, #footer {
+  margin-left: @autoAlign;
+  margin-right: @autoAlign;}
+
+#main { 
+  width: 950px;
+  margin: 20px @autoAlign;}
+
+header { 
+  width: 950px;
+  height: 105px;
+}
+
+#logo{
+
+  width: 250px;
+  float: left;
+  height: 100px;
+  background: transparent;
+  padding: @setZero @setZero 10px 10px;
+
+  h1 {
+    font: normal 350% @setFont;
+    padding: 45px @setZero @setZero 17px;
+
+    a:hover {
+      text-decoration: @noDecoration;
+    }
+  }
+}
+
+#site_content {
+  width: 950px;
+  overflow: hidden;
+  margin: 4px auto @setZero auto;
+  padding: @setZero;
+}
+
+footer { 
+  width: 930px;
+  font: @normalFontStyle 100% @setFont;
+  padding: 50px 20px 5px @setZero;
+  text-align: right; 
+  background: transparent;
+
+  color: @colorGray;
+  text-shadow: (@setZero+1)px (@setZero+1)px @colorBlack;
+
+  p {
+    padding: @setZero @setZero 10px @setZero;
+  }
+  a {
+    &:hover{
+      text-decoration: @noDecoration;
+      color: @colorGray;
+    }
+  }
+}
+
+
+ul#nav{
+  li a {
+    text-shadow: 1px 1px @colorBlack;
+    color: @colorWhite;
+  }
+
+  ul {
+    background: #151515;
+  }
+
+  li.selected a, li a:hover, ul li a:hover, ul li a:focus, li.selected ul a:hover {
+    color: @colorHover;
+  }
+}
+
+
+h1, a:hover, #logo h1, #logo h1 a:hover,
+footer a, ul#nav li.selected ul a, div.image-title {
+    color: @colorWhite;
+}

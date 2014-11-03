@@ -1,0 +1,85 @@
+/* stylesheet for sooperFish by www.sooperthemes.com -- author: jurriaan roelofs */
+html body ul.sf-menu ul,html body ul.sf-menu ul li {
+    width: 180px;}
+
+html body ul.sf-menu ul ul {
+    margin: 0 0 0 180px;}
+
+ul.sf-menu,ul.sf-menu * {
+    margin: 0;
+    padding: 0;}
+
+ul.sf-menu {
+    display: block;
+    position: relative;}
+
+ul.sf-menu li {
+    display: block;
+    list-style: none;
+    float: left;
+    position: relative;}
+
+ul.sf-menu li:hover {
+    visibility: inherit; /* fixes IE7 'sticky bug' */ }
+
+ul.sf-menu a {
+    display: block;
+    position: relative;}
+
+ul.sf-menu ul {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    top: auto;
+    left: -999999px;}
+
+ul.sf-menu ul a {
+    zoom: 1; /* IE6/7 fix */ }
+
+ul.sf-menu ul li {
+    float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
+    width: 150px;}
+
+ul.sf-menu ul ul {
+    top: 0;
+    margin: 0 0 0 150px;}
+
+ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul,
+ul.sf-menu ul li:hover ul,ul.sf-menu ul li:focus ul,ul.sf-menu ul li.sf-hover ul,
+ul.sf-menu ul ul li:hover ul,ul.sf-menu ul ul li:focus ul,ul.sf-menu ul ul li.sf-hover ul,
+ul.sf-menu ul ul ul li:hover ul,ul.sf-menu ul ul ul li:focus ul,ul.sf-menu ul ul ul li.sf-hover ul {
+    left: auto;}
+
+ul.sf-menu li:hover ul ul,ul.sf-menu li:focus ul ul,ul.sf-menu li.sf-hover ul ul,
+ul.sf-menu ul li:hover ul ul,ul.sf-menu ul li:focus ul ul,ul.sf-menu ul li.sf-hover ul ul,
+ul.sf-menu ul ul li:hover ul ul,ul.sf-menu ul ul li:focus ul ul,ul.sf-menu ul ul li.sf-hover ul ul,
+ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu ul ul ul li.sf-hover ul ul {
+    left: -999999px;}
+
+/* theming the menu */
+nav {
+    width: 650px;
+    margin: 1px auto 0 auto;
+    float: right;
+    padding: 35px 0 0 0;}
+
+ul#nav {
+    float: right;
+    margin: 25px 10px 0 0;}
+
+ul#nav li a {
+    font: normal 150% 'News Cycle', sans-serif;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    z-index: 10;
+    display: block;
+    float: left;
+    height: 30px;
+    padding:5px 14px 6px 15px;
+    position: relative;
+    overflow: hidden;}
+
+ul#nav ul {
+    margin-top: 40px;
+    padding-bottom: 10px;}
