@@ -1,0 +1,37 @@
+<?php
+
+/**
+* Implements hook_block_info().
+*/
+function helloworld_block_info() {
+     $blocks = array();
+     $blocks['helloworld_module'] = array(
+       'info' => t('A hello world module'),
+       'cache' => DRUPAL_NO_CACHE,
+	);
+    return $blocks;
+}
+
+/**
+* Implements hook_block_view().
+*/
+function helloworld_block_view($block_name = '') {
+	if ($block_name == 'helloworld_module') {
+		$block = array(
+		'subject' => t('Helloworld Module'),
+		'content' => t('Hello!!! <em>Can you</em>.. believe that you are going to be a <strong>Drupal Module Developer</strong>.'),
+         );
+		return $block;
+     }
+}
+
+/**
+* Implements hook_help().
+*/
+function helloworld_help($path, $arg) {
+	if ($path == 'admin/help#helloworld') {
+       return t('This is a help information for our Hello World module.');
+	}
+}
+
+

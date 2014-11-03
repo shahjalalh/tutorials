@@ -1,0 +1,10 @@
+name = Hello World
+version = 0.1
+description = A hello world module.
+package = HelloWorld
+core = 7.x
+
+files[] = helloworld.module
+
+;dependencies[] = autoload
+;php = 5.2
