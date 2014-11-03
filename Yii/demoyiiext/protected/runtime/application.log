@@ -1,0 +1,54 @@
+2014/01/20 21:49:27 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CModule.php(105): CComponent->__get('bootstrap')
+#1 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/views/layouts/main.php(18): CModule->__get('bootstrap')
+#2 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(126): require('/Users/shahjala...')
+#3 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/shahjala...', Array, true)
+#4 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/shahjala...', Array, true)
+#5 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(206): COutputProcessor->run()
+#8 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(126): require('/Users/shahjala...')
+#11 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/shahjala...', Array, true)
+#12 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(784): CBaseController->renderFile('/Users/shahjala...', Array, true)
+#13 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#15 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CWebApplication.php(282): CController->run('')
+#19 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#20 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/demoyiiext/
+---
+2014/01/20 22:08:36 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CModule.php(105): CComponent->__get('bootstrap')
+#1 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/views/layouts/main.php(5): CModule->__get('bootstrap')
+#2 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(126): require('/Users/shahjala...')
+#3 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/shahjala...', Array, true)
+#4 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/shahjala...', Array, true)
+#5 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(206): COutputProcessor->run()
+#8 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(126): require('/Users/shahjala...')
+#11 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/shahjala...', Array, true)
+#12 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(784): CBaseController->renderFile('/Users/shahjala...', Array, true)
+#13 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#15 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CWebApplication.php(282): CController->run('')
+#19 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#20 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/yiiroot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/shahjalal/Library/Containers/com.bitnami.mampstack/Data/app-5_4_9/apache2/htdocs/demoyiiext/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/demoyiiext/
+---
