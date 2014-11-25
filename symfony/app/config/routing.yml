@@ -1,0 +1,4 @@
+custom_book:
+    resource: "@CustomBookBundle/Resources/config/routing.yml"
+    prefix:   /
+

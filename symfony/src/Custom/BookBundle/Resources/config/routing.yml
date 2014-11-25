@@ -1,0 +1,7 @@
+custom_book_book:
+    resource: "@CustomBookBundle/Resources/config/routing/book.yml"
+    prefix:   /book
+
+custom_book_homepage:
+    path:     /hello
+    defaults: { _controller: CustomBookBundle:Default:index }
