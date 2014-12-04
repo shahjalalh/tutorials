@@ -3,14 +3,28 @@
 {% block body -%}
     <h1>Book edit</h1>
 
-    {{ form(edit_form) }}
+	{{ form_start(edit_form) }}
+    	<div class="form-group">
+    		{{ form_row(edit_form.name, {'attr': {'class': 'form-control'}}) }}
+    	</div>
+    	<div class="form-group">
+    		{{ form_row(edit_form.author, {'attr': {'class': 'form-control'}}) }}
+    	</div>
+    	<div class="form-group">
+    		{{ form_row(edit_form.language, {'attr': {'class': 'form-control'}}) }}
+    	</div>
+    	<div class="form-group">
+    		{{ form_row(edit_form.publisher, {'attr': {'class': 'form-control'}}) }}
+    	</div>
+    	<div class="form-group">
+    		{{ form_row(edit_form.summary, {'attr': {'class': 'form-control'}}) }}
+    	</div>
+    	<div class="form-group">
+    		{{ form_widget(edit_form.submit, {'attr': {'class': 'btn btn-default'}}) }}
+    	</div>
+    {{ form_end(edit_form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('book') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+
+    {{ form(delete_form) }}
+
 {% endblock %}

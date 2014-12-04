@@ -65,6 +65,7 @@ class BookController extends Controller
         $form = $this->createForm(new BookType(), $entity, array(
             'action' => $this->generateUrl('book_create'),
             'method' => 'POST',
+            'attr'=> array('role'=>'form'),
         ));
 
         $form->add('submit', 'submit', array('label' => 'Create'));
@@ -172,7 +173,8 @@ class BookController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('book_edit', array('id' => $id)));
+            //return $this->redirect($this->generateUrl('book_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('book'));
         }
 
         return $this->render('CustomBookBundle:Book:edit.html.twig', array(
@@ -217,7 +219,8 @@ class BookController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('book_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Delete', 
+                                            'attr' => array('class' => 'btn btn-danger btn-lg')))
             ->getForm()
         ;
     }
