@@ -5,3 +5,14 @@ custom_book_book:
 custom_book_homepage:
     path:     /hello
     defaults: { _controller: CustomBookBundle:Default:index }
+
+
+login:
+  path: /login
+  defaults: { _controller: CustomBookBundle:Security:login }
+
+login_check:
+  path: /login_check
+
+logout:
+  pattern: /logout

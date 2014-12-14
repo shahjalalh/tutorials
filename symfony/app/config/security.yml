@@ -1,12 +1,30 @@
 security:
+    encoders:
+      Symfony\Component\Security\Core\User\User: plaintext
+    role_hierarchy:
+      ROLE_ADMIN: [ROLE_USER]
     providers:
-        in_memory:
-            memory: ~
-
+      chain_provider:
+        chain:
+          providers: [in_memory]
+      in_memory:
+        memory:
+          users:
+            admin: {password: adminpass, roles: ROLE_ADMIN}
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+      main:
+        pattern: /.*
+        form_login:
+          login_path: /login
+          check_path: /login_check
+          default_target_path: /book
+        logout:
+          path: /logout
+          target: /book
+        security: true
+        anonymous: true
 
-        default:
-            anonymous: ~
+
+    access_control:
+      - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: /.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
