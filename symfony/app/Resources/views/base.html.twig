@@ -32,8 +32,12 @@
 
                     {% if is_granted('ROLE_ADMIN') %}
                         <li><a href="{{ path('logout') }}">Logout</a></li>
+                        <li><a href="{{ path('user') }}">User</a></li>
+                    {% elseif is_granted('ROLE_USER') %}
+                        <li><a href="{{ path('logout') }}">Logout</a></li>
                     {% else %}
                         <li><a href="{{ path('login') }}">Login</a></li>
+                        <li><a href="{{ path('user_new') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>

@@ -1,16 +1,19 @@
 security:
     encoders:
       Symfony\Component\Security\Core\User\User: plaintext
+      Custom\BookBundle\Entity\User: bcrypt
     role_hierarchy:
       ROLE_ADMIN: [ROLE_USER]
     providers:
       chain_provider:
         chain:
-          providers: [in_memory]
+          providers: [in_memory, user_db]
       in_memory:
         memory:
           users:
             admin: {password: adminpass, roles: ROLE_ADMIN}
+      user_db:
+        entity: {class: CustomBookBundle:User, property: username}
     firewalls:
       main:
         pattern: /.*
@@ -26,5 +29,9 @@ security:
 
 
     access_control:
-      - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-      - { path: /.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: /login, roles: [IS_AUTHENTICATED_ANONYMOUSLY, ROLE_USER] }
+      - { path: /user/edit, roles: ROLE_ADMIN }
+      - { path: /user/index, roles: ROLE_ADMIN }
+      - { path: /user/show, roles: ROLE_ADMIN }
+      - { path: /user/new, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: /.*, roles: [IS_AUTHENTICATED_ANONYMOUSLY, ROLE_USER] }

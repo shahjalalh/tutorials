@@ -1,3 +1,7 @@
+custom_book_user:
+    resource: "@CustomBookBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
 custom_book_book:
     resource: "@CustomBookBundle/Resources/config/routing/book.yml"
     prefix:   /book

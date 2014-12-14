@@ -1,0 +1,30 @@
+user:
+    path:     /
+    defaults: { _controller: "CustomBookBundle:User:index" }
+
+user_show:
+    path:     /{id}/show
+    defaults: { _controller: "CustomBookBundle:User:show" }
+
+user_new:
+    path:     /new
+    defaults: { _controller: "CustomBookBundle:User:new" }
+
+user_create:
+    path:     /create
+    defaults: { _controller: "CustomBookBundle:User:create" }
+    requirements: { _method: post }
+
+user_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CustomBookBundle:User:edit" }
+
+user_update:
+    path:     /{id}/update
+    defaults: { _controller: "CustomBookBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CustomBookBundle:User:delete" }
+    requirements: { _method: post|delete }
