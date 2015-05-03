@@ -1,0 +1,11 @@
+services:
+    sonata.admin.post:
+        class: Custom\CMSBundle\Admin\PostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Post" }
+        arguments:
+            - ~
+            - Custom\CMSBundle\Entity\Post
+            - ~
+        calls:
+            - [ setTranslationDomain, [CustomCMSBundle]]
