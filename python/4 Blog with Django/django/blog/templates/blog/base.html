@@ -1,0 +1,16 @@
+<body>
+    <div>
+        <h1><a href="/">Django Blog</a></h1>
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}">Add</a>
+        {% endif %}
+    </div>
+    <div>
+        <div>
+            <div>
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
